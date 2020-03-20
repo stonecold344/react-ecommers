@@ -46,7 +46,7 @@ export default class Details extends Component {
                                            </ButtonContainer>
                                        </Link>
 
-                                       <ButtonContainer 
+                                       {value.isLoged?(<ButtonContainer 
                                            cart
                                            disabled={inCart? true:false}
                                            onClick={()=>{
@@ -55,7 +55,7 @@ export default class Details extends Component {
                                            }}
                                            >
                                                 {inCart ? "inCart" : "add to cart"}
-                                       </ButtonContainer>
+                                       </ButtonContainer>):(null)}
                                    </div>
                                </div>
                            </div>

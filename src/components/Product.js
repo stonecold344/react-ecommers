@@ -14,27 +14,28 @@ export default class Product extends Component {
             price, 
             inCart
             }= this.props.product;
+            
         return (
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
                 <Card>
                     <ProductConsomer>
                         {(value) => (<Container className="img-container p-5" onClick={()=>value.handelDetail(id)}>
-                            <Link to="/details">
+                            <Link to="/details" >
                             <Image src={img} alt="product img" className="card-img-top"/>
                             </Link>
-                            <Button 
+                            {value.isLoged?(<Button 
                             className="cart-btn" 
                             disabled={inCart ? true:false}
-                                onClick={()=>{
-                                    value.addToCart(id);
-                                    value.openModal(id);
+                            onClick={()=>{
+                                value.addToCart(id);
+                                value.openModal(id);
                                 }
                               }
                             >
                             {inCart?
                             (<p className="text-capitalize mb-0" disabled>InCart</p>):
                             (<i className="fa fa-cart-plus"></i>)}
-                            </Button>
+                            </Button>):(null)}
                         </Container>)}
                    </ProductConsomer>
                    <Card.Footer className="card-footer d-flex justify-content-between">
@@ -66,12 +67,8 @@ const ProductWrapper=styled.div`
     transition:all 1s linear;
 }
 &:hover{
-    .card{
-        border:0.04rem solid rgba(0,0,0,2);
-        box-shadow:2px2px5px rgba(0,0,0,0.2);
-    }
     .card-footer{
-        background:rgba(2247,247,247);
+        background:rgba(247,247,247);
     }
 }
 .img-container{

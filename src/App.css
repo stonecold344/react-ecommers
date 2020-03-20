@@ -5,6 +5,8 @@
   --mainDark:#232528;
   --mainYellow:#ffa400;
   --mainRed:#FF0000;
+  --mainGreen:#4ed60f;
+  --midBlue:#4444ac;
 }
 
 body{
@@ -46,3 +48,346 @@ body{
   font-size: 1.2rem;
   color:var(--mainRed);
 }
+
+.btn-link{
+  text-decoration: none;
+
+}
+.btn-link:focus, .btn-link:hover, .btn-link:visited, .btn-link:link ,.btn-link:active {
+        text-decoration: none;
+}
+
+.search input{
+  border:1px solid;
+}
+
+.search::focus input{
+  border-color:var(--mainYellow) 2px solid;
+}
+
+.searchButton{
+  background: #2196F3;
+  color: white;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-left: none;
+  border-radius: 2px 2px 2px 2px; 
+  cursor: pointer;
+  text-align: center;
+}
+
+.searchButton:hover {
+  background: var(--mainYellow);
+  color:var(--mainDark);
+  transition: all 0.5s ease-in-out;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #258ea6;
+  background-size: cover;
+}
+
+.form-wrapper {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+  background-color: #ffffff;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: lighter;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+label {
+  font-size: 0.8em;
+  margin-bottom: 0.25em;
+  color: #222;
+  font-weight: lighter;
+}
+
+input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #999;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+textarea:focus
+,input:focus{
+  border: 2px solid #519e8a;
+}
+
+textarea{
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+.firstName {
+  margin-right: 1%;
+}
+
+.lastName {
+  margin-left: 1%;
+}
+
+.firstName,
+.lastName,
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.firstName,
+.lastName {
+  width: 49%;
+}
+
+.email,
+.password {
+  width: 100%;
+}
+
+.createAccount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createAccount button {
+  background-color: #519e8a;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+}
+
+.createAccount button:hover {
+  color: #519e8a;
+  background-color: #fff;
+  border: 2px solid #519e8a;
+}
+
+.createAccount small {
+  color: #999;
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #258ea6 ;
+      max-height: max-content;
+    }
+    
+    .form-wrapper {
+      width: 400px;
+      padding: 20px 40px;
+      background-color: #ffffff;
+    }
+    
+    form {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+    }
+    
+    h1 {
+      text-align: center;
+      width: 100%;
+      color: #111;
+      font-weight: lighter;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    
+    label {
+      font-size: 0.8em;
+      margin-bottom: 0.25em;
+      color: #222;
+      font-weight: lighter;
+    }
+    
+    input {
+      padding: 10px 10px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #cfcfcf;
+      width: auto;
+    }
+    
+    input::placeholder {
+      font-size: 1.2em;
+      font-weight: lighter;
+      color: #999;
+    }
+    
+    input.error {
+      border: 1px solid red;
+    }
+    
+    input:focus{
+      border: 2px solid #519e8a;
+    }
+    
+    .errorMessage {
+      color: red;
+      font-size: 0.75em;
+      display: relative;
+    }
+    
+    .firstName {
+      margin-right: 1%;
+    }
+    
+    .lastName {
+      margin-left: 1%;
+    }
+    
+    .firstName,
+    .lastName,
+    .email,
+    .password {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+    
+    .firstName,
+    .lastName {
+      width: 50%;
+    }
+    
+    .email,
+    .password {
+      width: 51%;
+    }
+    
+    .createAccount {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .createAccount button {
+      background-color: #519e8a;
+      color: #fff;
+      border: 2px solid #fff;
+      width: 100%;
+      margin-top: 1em;
+      padding: 8px 0px;
+      font-size: 1em;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      margin-bottom: 0.25em;
+    }
+  }
+
+  /* .contect{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px #555;
+    background-color: #ffffff;
+    justify-content: center;
+  }*/
+   
+  .contectButton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contectButton button {
+    background-color: var(--mainBlue);
+    color: #fff;
+    border: 2px solid #fff;
+    width: 100%;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+  }
+  
+  .contectButton button:hover {
+    color:var(--mainBlue) ;
+    background-color: #fff;
+    border: 2px solid var(--mainBlue);
+  }
+  
+  .contectButton small {
+    color: #999;
+    font-weight: lighter;
+  }
+  
+ 
+  /* .input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+} */
+
+

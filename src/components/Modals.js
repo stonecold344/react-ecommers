@@ -66,6 +66,7 @@ justify-content:center;
 
 #modal{
     background:var(--mainWhite);
-    border:0.5rem solid;
+    border:0.2rem solid;
+    border-radius:10px;
 }
 `;
